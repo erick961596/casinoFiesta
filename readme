@@ -1,0 +1,85 @@
+# Smart Gym
+
+Proyecto para la administracion de un gimnasio
+
+
+## Instrucciones de instalación GIT y GitHub
+Descargar GIT desde esta direccion
+* [GIT](https://git-scm.com/download/win) - Sistema de control de versiones
+
+Generar el SSH key
+* [GITHUB](https://help.github.com/articles/generating-an-ssh-key/) - Sistema de control de versiones
+Pasos:
+1- [Crear el SSH key en la computadora](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) - tienen que registrar un passphrase, algo simple que puedan recordar despues.... recomiendo la misma clave del correo o algo por el estilo
+2- [Agregar el SSH key a la cuenta de Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/) - 
+3- [Probar la conexion](https://help.github.com/articles/testing-your-ssh-connection/) - 
+
+
+## Conexion con el repositorio en Github
+Pasos:
+1- Abrir Git Bash y dirigirse al escritorio
+2- Registrar nombre de usuario de git:
+```
+git config --global user.name "MiNombreDeUsuarioDeGithub"
+```
+3- Registrar correo de git:
+```
+git config --global user.email  "miCorreoRegistradoEnGithub@xxx.xxxx"
+```
+3- Clonar el repositorio remoto en nuestra maquina local:
+```
+git clone git@github.com:mfranco84/SmartGym.git
+```
+4- En algunos casos va a pedir el passphrase, van a digitar el passphrase que registraron cuando crearon el SSH key y le dan ENTER, ...la clave no se ve en pantalla ni siquiera asteriscos, no se asusten, el resultado es algo asi:
+```
+Counting objects: 212, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (209/209), done.
+Writing objects: 100% (212/212), 765.27 KiB | 0 bytes/s, done.
+Total 212 (delta 116), reused 0 (delta 0)
+remote: Resolving deltas: 100% (116/116), done.
+To git@github.com:mfranco84/SmartGym.git
+   a47c16f..e3345fd  master -> master
+```
+5- En este momento si se fijan en el escritorio, deberian tener un folder que se llame "SmartGym" y dentro de este otro folder "Proyecto_Gym" el cual contiene el proyecto visual studio.
+
+
+## Proceso de trabajo con GIT
+Por defecto, git maneja un branch principal llamado master, de aqui nos basamos para crear nuevos branches y luego fusionamos (merge) nuestros cambios en los branches secundarios nuevamente al master. Este es el branch que tiene el codigo estable de la aplicacion.
+Antes de comenzar a trabajar, vamos a hacer un branch con nuestro nombre de la siguiente manera:
+1- Crear nuevo branch localmente
+```
+git checkout -B MiNombre
+```
+2- Subir branch al repositorio remoto
+```
+git push origin MiNombre
+```
+En este momento, el branch se encuentra en el repositorio.
+
+Luego de editar o eliminar uno o varios archivos, procedemos a hacer los siguientes pasos:
+1- Ver archivos cambiados o nuevo, tambien el branch donde estoy trabajando
+```
+git status
+```
+2- Registrar archivos nuevos en el ambiente
+```
+git add .
+```
+3- Guardar los cambios de manera local
+```
+git commit -a -m "Comentario descriptivo de lo que se hizo"
+```
+4- Subir los cambios al repositorio remoto
+```
+git push origin BranchEnElQueEstoy
+```
+En este momento, el branch se actualizo con los ultimos cambios hechos y puede ser accedido por otro usuario.
+
+Agregar los cambios de mi branch en el branch master:
+1- Ingresar a [SmartGym](https://github.com/mfranco84/SmartGym)
+2- Dirigirse al tab llamado "Pull requests"
+3- Click en el boton "New pull request"
+4- En la opcion "base" escoger siempre "master", en la opcion "compare" escoger "BranchConMiNombre" 
+5- Click en el boton "Create pull request"
+6- Avisar a los demás developers
