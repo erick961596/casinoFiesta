@@ -1,0 +1,19 @@
+.padding-login{
+    padding: 50px 20px 40px 20px;
+}
+
+.padding-bottom{
+    position: fixed;
+    bottom: 0px;
+}
+.btn-error-sesion{
+    color: red;
+    text-decoration: none;
+}
+.error-inicio-sesion{
+    padding-top: 10px;
+   /* display: none;*/
+}
+.img-responsive {
+    margin: 0 auto;
+}

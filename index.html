@@ -7,11 +7,26 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/main.css">
     <title>Casino Fiesta</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+  <div class="container-fluid padding-login">
+    <h1 class="text-center">Bienvenido(a)</h1>
+    <img src="img/espada-login.png" class="img-responsive d-block" width="auto" height="100px">
+  </div>
+    <div class="container padding-login">
+            <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="numeroCedula" aria-describedby="emailHelp" placeholder="Número de cédula">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Verificar</button>
+            <p class="error-inicio-sesion text-center">Hubo un error al ingresar <a class="btn-error-sesion" href="#">Ver más</a></p>
+          </form>
+    </div>
+    <div class="container-fluid padding-bottom" >
+    <p class="text-center">Si tiene alguna consulta o problema al ingresar escríbanos a <a href="mailto:eaperezr@tangentecr.com">eaperezr@tangentecr.com</a> </p>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
